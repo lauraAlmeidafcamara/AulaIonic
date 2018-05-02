@@ -3,9 +3,29 @@
 
   </ion-navbar>
 </ion-header>
- 
+
 <ion-content padding>
-  <ion-list *ngFor ="let item of todo" >
+  <ion-list *ngFor="let item of todo">
     <ion-item>{{item.title}}</ion-item>
   </ion-list>
+  <ion-list>
+    <ion-item>
+      <ion-label color="primary" fixed>Frase</ion-label>
+      <ion-input type="text" placeholder="Frase" [(ngModel)]="frase" name="frase"></ion-input>
+    </ion-item>
+    <ion-item>
+    <ion-label color="primary" fixed>userId</ion-label>
+    <ion-input type="tel" placeholder="0" [(ngModel)]="userId" name="userId"></ion-input>
+    </ion-item>
+    <ion-item>
+    <ion-label color="primary" fixed>ID</ion-label>
+    <ion-input type="tel" placeholder="0" [(ngModel)]="id" name="id"></ion-input>
+    </ion-item>
+  </ion-list>
+  <button ion-button round (click)="post()">Cadastrar</button>
+  <!-- <ion-item>
+    <ion-label color="primary" fixed>Informe a Id</ion-label>
+    <ion-input type="text" [(ngModel)]="id" placeholder="id"></ion-input>
+    <button ion-button round>Pesquisar</button>
+    </ion-item> -->
 </ion-content>
